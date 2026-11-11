@@ -1,0 +1,14 @@
+\begin{tabular}{>{\columncolor{fila}}c|ccccccccc}
+\toprule
+\rowcolor{cabecera}
+& \tm{num} & \tm{(} & \tm{)} & \tm{+} & \tm{-} & \tm{*} & \tm{/} & \tm{\^{}} & \tm{\$} \\
+\midrule
+\nt{E} & \scriptsize \nt{T}\,\nt{E'} & \scriptsize \nt{T}\,\nt{E'} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} & \scriptsize \nt{T}\,\nt{E'} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} \\
+\nt{E'} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} & \scriptsize \lam & \scriptsize \tm{+}\,\nt{T}\,\nt{E'} & \scriptsize \tm{-}\,\nt{T}\,\nt{E'} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} & \scriptsize \lam \\
+\nt{T} & \scriptsize \nt{F}\,\nt{T'} & \scriptsize \nt{F}\,\nt{T'} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} & \scriptsize \nt{F}\,\nt{T'} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} \\
+\nt{T'} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} & \scriptsize \lam & \scriptsize \lam & \scriptsize \lam & \scriptsize \tm{*}\,\nt{F}\,\nt{T'} & \scriptsize \tm{/}\,\nt{F}\,\nt{T'} & \textcolor{gris!60}{\scriptsize error} & \scriptsize \lam \\
+\nt{F} & \scriptsize \nt{P}\,\nt{F'} & \scriptsize \nt{P}\,\nt{F'} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} & \scriptsize \tm{-}\,\nt{F} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} \\
+\nt{F'} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} & \scriptsize \lam & \scriptsize \lam & \scriptsize \lam & \scriptsize \lam & \scriptsize \lam & \scriptsize \tm{\^{}}\,\nt{F} & \scriptsize \lam \\
+\nt{P} & \scriptsize \tm{num} & \scriptsize \tm{(}\,\nt{E}\,\tm{)} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} & \textcolor{gris!60}{\scriptsize error} \\
+\bottomrule
+\end{tabular}

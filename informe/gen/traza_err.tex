@@ -1,0 +1,12 @@
+1 & 0 & \hspace*{0.0em}\nt{E} $\rightarrow$ \nt{T}\,\nt{E'} & \tm{3} & \texttt{\small 3 + * 4 \$} \\
+2 & 1 & \hspace*{0.9em}\nt{T} $\rightarrow$ \nt{F}\,\nt{T'} & \tm{3} & \texttt{\small 3 + * 4 \$} \\
+3 & 2 & \hspace*{1.8em}\nt{F} $\rightarrow$ \nt{P}\,\nt{F'} & \tm{3} & \texttt{\small 3 + * 4 \$} \\
+4 & 3 & \hspace*{2.7em}\nt{P} $\rightarrow$ \tm{num} & \tm{3} & \texttt{\small 3 + * 4 \$} \\
+5 & 4 & \hspace*{3.6em}\textcolor{ok}{$\checkmark$ coincide \tm{3}} & \tm{3} & \texttt{\small + * 4 \$} \\
+6 & 3 & \hspace*{2.7em}\nt{F'} $\rightarrow$ \lam & \tm{+} & \texttt{\small + * 4 \$} \\
+7 & 2 & \hspace*{1.8em}\nt{T'} $\rightarrow$ \lam & \tm{+} & \texttt{\small + * 4 \$} \\
+8 & 1 & \hspace*{0.9em}\nt{E'} $\rightarrow$ \tm{+}\,\nt{T}\,\nt{E'} & \tm{+} & \texttt{\small + * 4 \$} \\
+9 & 2 & \hspace*{1.8em}\textcolor{ok}{$\checkmark$ coincide \tm{+}} & \tm{+} & \texttt{\small * 4 \$} \\
+10 & 2 & \hspace*{1.8em}\nt{T} $\rightarrow$ \nt{F}\,\nt{T'} & \tm{*} & \texttt{\small * 4 \$} \\
+11 & 3 & \hspace*{2.7em}\nt{F} $\rightarrow$ \nt{P}\,\nt{F'} & \tm{*} & \texttt{\small * 4 \$} \\
+\rowcolor{err!8}12 & 4 & \hspace*{3.6em}\textcolor{err}{$\times$ Operador \textquotesingle{}*\textquotesingle{} inesperado después de \textquotesingle{}+\textquotesingle{}: falta un operando} & \tm{*} & \texttt{\small * 4 \$} \\

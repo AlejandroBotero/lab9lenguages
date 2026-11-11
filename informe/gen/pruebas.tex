@@ -1,0 +1,26 @@
+1 & \texttt{3 + 4 * 2} & precedencia de * sobre + & \badge{ok}{aceptada} & $=$ \texttt{11} \\
+2 & \texttt{(3 + 4) * 2} & paréntesis alteran la precedencia & \badge{ok}{aceptada} & $=$ \texttt{14} \\
+3 & \texttt{10 - 4 - 3} & asociatividad izquierda de - & \badge{ok}{aceptada} & $=$ \texttt{3} \\
+4 & \texttt{100 / 10 / 5} & asociatividad izquierda de / & \badge{ok}{aceptada} & $=$ \texttt{2} \\
+5 & \texttt{2 \^{} 3 \^{} 2} & asociatividad derecha de \^{} & \badge{ok}{aceptada} & $=$ \texttt{512} \\
+6 & \texttt{-2 \^{} 2} & \^{} precede al menos unario & \badge{ok}{aceptada} & $=$ \texttt{-4} \\
+7 & \texttt{2 \^{} -1} & exponente negativo & \badge{ok}{aceptada} & $=$ \texttt{0.5} \\
+8 & \texttt{--3} & menos unario anidado & \badge{ok}{aceptada} & $=$ \texttt{3} \\
+9 & \texttt{3.5 * .5 + 1} & números decimales & \badge{ok}{aceptada} & $=$ \texttt{2.75} \\
+10 & \texttt{((((7))))} & paréntesis anidados & \badge{ok}{aceptada} & $=$ \texttt{7} \\
+11 & \texttt{(1 + 2) * (3 - 4) / 5} & expresión compuesta & \badge{ok}{aceptada} & $=$ \texttt{-0.6} \\
+12 & \texttt{3 \ensuremath{\times} 4 \ensuremath{\div} 2 - 1} & símbolos tipográficos & \badge{ok}{aceptada} & $=$ \texttt{5} \\
+13 & \textit{(vacía)} & entrada vacía & \badge{err}{sintáctico} & La expresión está vacía \textcolor{gris}{(pos.~1)} \\
+14 & \texttt{3 + * 4} & operador sin operando & \badge{err}{sintáctico} & Operador \textquotesingle{}*\textquotesingle{} inesperado después de \textquotesingle{}+\textquotesingle{}: falta un operando \textcolor{gris}{(pos.~5)} \\
+15 & \texttt{2 +} & expresión incompleta & \badge{err}{sintáctico} & Expresión incompleta: falta un operando después de \textquotesingle{}+\textquotesingle{} \textcolor{gris}{(pos.~4)} \\
+16 & \texttt{* 3} & inicia con operador binario & \badge{err}{sintáctico} & La expresión no puede comenzar con el operador \textquotesingle{}*\textquotesingle{} \textcolor{gris}{(pos.~1)} \\
+17 & \texttt{3 4} & falta operador & \badge{err}{sintáctico} & Falta un operador entre \textquotesingle{}3\textquotesingle{} y \textquotesingle{}4\textquotesingle{} \textcolor{gris}{(pos.~3)} \\
+18 & \texttt{3 (4)} & falta operador antes de ( & \badge{err}{sintáctico} & Falta un operador entre \textquotesingle{}3\textquotesingle{} y \textquotesingle{}(\textquotesingle{} \textcolor{gris}{(pos.~3)} \\
+19 & \texttt{(5 + 2} & paréntesis sin cerrar & \badge{err}{sintáctico} & Falta \textquotesingle{})\textquotesingle{} para cerrar el \textquotesingle{}(\textquotesingle{} de la posición 1 \\
+20 & \texttt{5 + 2)} & paréntesis sin abrir & \badge{err}{sintáctico} & Paréntesis \textquotesingle{})\textquotesingle{} sin abrir en la posición 6 \\
+21 & \texttt{()} & paréntesis vacíos & \badge{err}{sintáctico} & Paréntesis vacíos: se esperaba una expresión dentro de \textquotesingle{}( )\textquotesingle{} \textcolor{gris}{(pos.~2)} \\
+22 & \texttt{7 \$ 2} & carácter inválido & \badge{err}{léxico} & Carácter no reconocido \textquotesingle{}\$\textquotesingle{} en la posición 3 \\
+23 & \texttt{1.5.2} & número mal formado & \badge{err}{léxico} & Número mal formado: \textquotesingle{}1.5.2\textquotesingle{} \textcolor{gris}{(pos.~1)} \\
+24 & \texttt{8 / (4 - 4)} & división por cero & \badge{op}{semántico} & División por cero: 8 / 0 \textcolor{gris}{(pos.~3)} \\
+25 & \texttt{(-8) \^{} 0.5} & potencia no real & \badge{op}{semántico} & Potencia no real: -8 \^{} 0.5 \textcolor{gris}{(pos.~6)} \\
+26 & \texttt{9 \^{} 9 \^{} 9} & desbordamiento & \badge{op}{semántico} & Desbordamiento: el resultado es demasiado grande \textcolor{gris}{(pos.~3)} \\

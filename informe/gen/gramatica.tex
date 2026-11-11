@@ -1,0 +1,7 @@
+\nt{E} & $\rightarrow$ & \nt{T}\,\nt{E'} \\
+\nt{E'} & $\rightarrow$ & \tm{+}\,\nt{T}\,\nt{E'} \;$\mid$\; \tm{-}\,\nt{T}\,\nt{E'} \;$\mid$\; \lam \\
+\nt{T} & $\rightarrow$ & \nt{F}\,\nt{T'} \\
+\nt{T'} & $\rightarrow$ & \tm{*}\,\nt{F}\,\nt{T'} \;$\mid$\; \tm{/}\,\nt{F}\,\nt{T'} \;$\mid$\; \lam \\
+\nt{F} & $\rightarrow$ & \tm{-}\,\nt{F} \;$\mid$\; \nt{P}\,\nt{F'} \\
+\nt{F'} & $\rightarrow$ & \tm{\^{}}\,\nt{F} \;$\mid$\; \lam \\
+\nt{P} & $\rightarrow$ & \tm{num} \;$\mid$\; \tm{(}\,\nt{E}\,\tm{)} \\
